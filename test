@@ -1,0 +1,8 @@
+#!/bin/sh
+
+make clean
+make
+
+echo "====TEST 1===="
+./proj3 -r 1i.trace -p > output
+diff output 1i-p.out
