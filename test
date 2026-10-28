@@ -6,3 +6,19 @@ make
 echo "====TEST 1===="
 ./proj3 -r 1i.trace -p > output
 diff output 1i-p.out
+
+echo "====TEST 2===="
+./proj3 -r 100-flows.trace -p > output
+diff output 100-flows-p.out
+
+echo "====TEST 3===="
+./proj3 -r 100-flows.trace -n > output
+diff output 100-flows-n.out
+
+echo "====TEST 4===="
+./proj3 -r 50K-flows.trace -p > output
+diff output 50K-flows-p.out
+
+echo "====TEST 5===="
+./proj3 -r 50K-flows.trace -n > output
+diff output 50K-flows-n.out
